@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(52, 57, 65);
+    color: white;
+    font-family: cursive;
+    height: 40px;
+}
+
+.heading {
+    margin-bottom: 0;
+}
+
+.dropdown {
+    position: relative;
+    outline: none;
+    background: transparent;
+}
+
+.btn {
+    background: transparent;
+    width: 150px;
+    height: 40px;
+    outline: none;
+    padding: 0;
+    font-size: 20px;
+}
+
+.select {
+    height: 40px;
+    outline: none;
+}
+
+.select:hover {
+    cursor: pointer;
+    outline: none;
+}
+
+.select > hr {
+    position: relative;
+    top: -1rem;
+}
+
+.select:focus {
+    background-color: aqua;
+    outline: none;
+}
