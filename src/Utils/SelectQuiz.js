@@ -1,15 +1,36 @@
-export const quiz = [
-  [
-    [0, 50],
-    [51, 100],
-    [101, 150],
-    [151, 200],
-    [201, 250],
-    [251, 300],
-    [301, 350],
-    [351, 400],
-    [401, 450],
-    [451, 512],
-  ],
-  [],
-];
+import { useSelector } from "react-redux";
+
+function SelectQuiz() {
+  const topic = useSelector((state) => state.topic.value);
+  const QuizNo = useSelector((state) => state.selectQuiz.value);
+
+  const quizOption = [
+    [
+      [0, 50],
+      [51, 100],
+      [101, 150],
+      [151, 200],
+      [201, 250],
+      [251, 300],
+      [301, 350],
+      [351, 400],
+      [401, 450],
+      [451, 517],
+    ],
+    [
+      [0, 50],
+      [51, 100],
+      [101, 150],
+      [151, 200],
+      [201, 250],
+      [251, 300],
+      [301, 350],
+      [351, 400],
+      [401, 469],
+    ],
+  ];
+
+  return [quizOption[topic], quizOption[topic][QuizNo]];
+}
+
+export default SelectQuiz;

@@ -15,6 +15,6 @@ export const topicSlice = createSlice({
 });
 
 
-export const { open, close } = topicSlice.actions;
+export const { Topic } = topicSlice.actions;
 
 export default topicSlice.reducer;

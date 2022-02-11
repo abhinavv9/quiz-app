@@ -1,0 +1,16 @@
+.layout {
+    display: flex;
+}
+
+.section2 {
+    width: 75%;
+    /* background-color: #ffffff; */
+    height: 90vh;
+}
+
+
+.section3 {
+    width: 25%;
+    background-color: #323435;
+    min-height: 94.4vh;
+}

@@ -1,15 +1,24 @@
 import { useState } from "react";
-import { quiz } from "../../Utils/SelectQuiz";
+import Quiz from "../../Utils/SelectQuiz";
 //css import
 import classes from "./Navbar.module.css";
 
+//redux
+import { useSelector, useDispatch } from "react-redux";
+import { Select } from "../../Redux/Slices/quizSlice.js";
+
 const Navbar = () => {
-  const [selectQuizNo, setSelectQuizNo] = useState(null);
-  console.log(selectQuizNo);
+  const dispatch = useDispatch();
+  const selectQuizNo = useSelector((state) => state.selectQuiz.value);
+
+  const quizOptions = Quiz();
+  const quiz = quizOptions[0].map((item) => {
+    return item;
+  });
 
   return (
     <div className={classes.container}>
-      <p className={classes.heading}>MT Prateek Badola</p>
+      <p className={classes.heading}>MT PRATEEK BADOLA</p>
       <div className={classes.dropdown + " btn-group"}>
         <button
           type="button"
@@ -18,20 +27,15 @@ const Navbar = () => {
           aria-haspopup="true"
           aria-expanded="false"
         >
-          {selectQuizNo
-            ? quiz[0][selectQuizNo - 1][0] +
-              " - " +
-              quiz[0][selectQuizNo - 1][1] +
-              "  "
-            : "Select Quiz"}
+          {quiz[selectQuizNo][0] + " - " + quiz[selectQuizNo][1] + "  "}
         </button>
         <div className="dropdown-menu">
-          {quiz[0].map((arr, i) => {
+          {quiz.map((arr, i) => {
             return (
               <div className={classes.select} key={i}>
                 <button
                   className="dropdown-item"
-                  onClick={() => setSelectQuizNo(i + 1)}
+                  onClick={() => dispatch(Select(i))}
                 >
                   {arr[0] + "-" + arr[1]}
                 </button>

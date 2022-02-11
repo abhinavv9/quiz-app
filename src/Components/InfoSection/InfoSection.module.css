@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.infoContainer {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+}
+
+.questionNoContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    justify-content: space-around;
+    width: 300px;
+    height: 300px;
+    margin: 0rem auto 0 auto;
+    padding: 0rem 0.5rem 0.5rem 0.5rem;
+    /* position:absolute;
+    right: 5rem;
+    top: 5rem; */
+    border: 1px solid rgb(255, 255, 255);
+    overflow-y: scroll;
+}
+
+.index{
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    align-self: center;
+    padding-top: 7px;
+    margin-top: 10px;
+}
+
+.index:hover {
+    cursor: pointer;
+}
+
+.index:visited {
+    background-color: #121212;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid rgb(255, 255, 255);
+    width: 100%;
+    margin-top: 2rem;
+
+}
+
+.btn {
+    width: 100px;
+    background: transparent;
+    border: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: inset 1px 2px 2px 1px rgb(148, 148, 148);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #949494; 
+  }
