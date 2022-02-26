@@ -6,7 +6,7 @@ function SelectQuiz() {
 
   const quizOption = [
     [
-      [0, 50],
+      [1, 50],
       [51, 100],
       [101, 150],
       [151, 200],
@@ -18,7 +18,7 @@ function SelectQuiz() {
       [451, 517],
     ],
     [
-      [0, 50],
+      [1, 50],
       [51, 100],
       [101, 150],
       [151, 200],
@@ -28,6 +28,7 @@ function SelectQuiz() {
       [351, 400],
       [401, 469],
     ],
+    [[1, 500]],
   ];
 
   return [quizOption[topic], quizOption[topic][QuizNo]];

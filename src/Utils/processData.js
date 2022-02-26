@@ -1,16 +1,15 @@
-import { dataArticle, dataPenalCode } from "./data";
+import { dataArticle, dataPenalCode, dataCube } from "./data";
 import SelectQuiz from "./SelectQuiz";
 import { useSelector } from "react-redux";
 
 function DataExports() {
   const quizData = [];
   const quizNo = SelectQuiz();
-  const topicArr = [dataPenalCode, dataArticle];
-
+  const topicArr = [dataPenalCode, dataArticle, dataCube];
   const topic = useSelector((state) => state.topic.value);
 
   topicArr[topic]
-    .filter((item, index) => index >= (quizNo[1][0] + 1) && index <= quizNo[1][1] + 1)
+    .filter((item, index) => index >= quizNo[1][0] - 1 && index <= quizNo[1][1] - 1)
     .map((filteredItem) => quizData.push(filteredItem));
 
   function shuffle(array) {
@@ -34,6 +33,7 @@ function DataExports() {
   }
 
   const dataArr = shuffle(quizData);
+  dataArr.unshift({question: '', answer: ''});
 
   return dataArr;
 }

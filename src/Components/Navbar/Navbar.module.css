@@ -1,49 +1,89 @@
 .container {
-    display: flex;
-    margin: 0 auto;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #383e46;
-    color: #BB86FC;
-    font-family: cursive;
-    height: 40px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #383e46;
+  color: #bb86fc;
+  font-family: cursive;
+  height: 40px;
 }
 
 .heading {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .dropdown {
-    position: relative;
-    outline: none;
-    background: transparent;
+  position: relative;
+  outline: none;
+  background: transparent;
 }
 
 .btn {
-    background: transparent;
-    width: 150px;
-    height: 40px;
-    outline: none;
-    padding: 0;
-    font-size: 20px;
+  background: transparent;
+  width: 150px;
+  height: 35px;
+  outline: none;
+  padding: 0;
+  font-size: 20px;
 }
 
 .select {
-    height: 40px;
-    outline: none;
+  height: 40px;
+  outline: none;
 }
 
 .select:hover {
-    cursor: pointer;
-    outline: none;
+  cursor: pointer;
+  outline: none;
 }
 
 .select > hr {
-    position: relative;
-    top: -1rem;
+  position: relative;
+  top: -1rem;
 }
 
 .select:focus {
-    background-color: aqua;
-    outline: none;
+  background-color: aqua;
+  outline: none;
 }
+
+@media only screen and (max-width: 425px) {
+  .btn {
+    width: 120px;
+    height: 35px;
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .btn {
+    width: 100px;
+    height: 35px;
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .heading {
+      font-size: 14px;
+  }
+  .btn {
+    width: 90px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
+
+
+@media only screen and (max-width: 250px) {
+    .heading {
+        font-size: 12px;
+    }
+    .btn {
+      width: 80px;
+      height: 35px;
+      font-size: 14px;
+    }
+  }
+  

@@ -9,14 +9,14 @@ export const answerSlice = createSlice({
   initialState,
   reducers: {
     Answer: (state, action) => {
-      state.value =  [...state.value, action.payload];
+      state.value = [...state.value, action.payload];
     },
-    ResetAnswer: (state, action) => {
-        state.value = []
-    }
+    ResetAnswer: (state) => {
+      state.value = [];
+    },
   },
 });
 
-export const { Answer, ResetAnswer } = answerSlice.actions;
+export const { Answer, ResetAnswer, isCorrect } = answerSlice.actions;
 
 export default answerSlice.reducer;

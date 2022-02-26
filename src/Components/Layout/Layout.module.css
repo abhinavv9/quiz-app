@@ -1,16 +1,67 @@
 .layout {
-    display: flex;
+  display: flex;
+}
+
+.section1 {
+  width: 75vw;
+  background-color: #000000ef;
+  min-height: 100vh;
+}
+
+.switchButton {
+  position: absolute;
+  right: 1rem;
+  top: 3.5rem;
+  z-index: 2;
+  display: none;
 }
 
 .section2 {
-    width: 75%;
-    /* background-color: #ffffff; */
-    height: 90vh;
+  width: 25vw;
+  background-color: #323435;
+  min-height: 100vh;
 }
 
+@media only screen and (max-width: 1290px) {
+    .section1 {
+      width: 70vw;
+    }
+  
+    .section2 {
+      width: 30vw;
+    }
+  }
 
-.section3 {
-    width: 25%;
-    background-color: #323435;
-    min-height: 94.4vh;
+@media only screen and (max-width: 1090px) {
+  .section1 {
+    width: 65vw;
+  }
+
+  .section2 {
+    width: 35vw;
+  }
 }
+
+@media only screen and (max-width: 830px) {
+  .section1 {
+    width: 100vw;
+  }
+  .section2 {
+    position: absolute;
+    right: 200%;
+    transition: 0.5s;
+    height: 100vh;
+  }
+  .switchButton {
+      display: block;
+  }
+
+  .section2IsOpen {
+    position: absolute;
+    right: 0;
+    transform: translateX(0%);
+    z-index: 1;
+    transition: 0.5s;
+  }
+}
+

@@ -1,7 +1,6 @@
 const dataPenalCode = [
   {
-    question:
-      "",
+    question: "",
     answer: 0,
   },
   {
@@ -4334,4 +4333,9 @@ const dataArticle = [
   },
 ];
 
-export { dataPenalCode, dataArticle };
+var dataCube = [];
+for (var i = 1; i <= 500; i++) {
+  dataCube.push({ question: `${i * i * i} is cube of?`, answer: i });
+}
+
+export { dataPenalCode, dataArticle, dataCube };

@@ -1,0 +1,42 @@
+.container {
+  margin-top: 2rem;
+}
+.carousel {
+  height: fit-content;
+}
+
+.carousel.carousel-slider {
+  overflow: inherit;
+}
+
+.carousel .control-arrow,
+.carousel.carousel-slider .control-arrow {
+  opacity: 1;
+}
+
+.carousel .control-next.control-arrow:before {
+  content: "";
+  border: solid #000000;
+  border-width: 0 8px 8px 0;
+  display: inline-block;
+  padding: 14px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.carousel .control-next.control-arrow:hover {
+  background: none;
+}
+.carousel .control-prev.control-arrow:hover {
+  background: none;
+}
+
+.carousel .control-prev.control-arrow:before {
+  content: "";
+  border: solid #000000;
+  border-width: 0 8px 8px 0;
+  display: inline-block;
+  padding: 14px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}

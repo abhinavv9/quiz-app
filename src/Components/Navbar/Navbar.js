@@ -7,7 +7,7 @@ import classes from "./Navbar.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { Select } from "../../Redux/Slices/quizSlice.js";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const dispatch = useDispatch();
   const selectQuizNo = useSelector((state) => state.selectQuiz.value);
 
@@ -20,15 +20,17 @@ const Navbar = () => {
     <div className={classes.container}>
       <p className={classes.heading}>MT PRATEEK BADOLA</p>
       <div className={classes.dropdown + " btn-group"}>
-        <button
-          type="button"
-          className={classes.btn + " btn btn-secondary dropdown-toggle"}
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          {quiz[selectQuizNo][0] + " - " + quiz[selectQuizNo][1] + "  "}
-        </button>
+        {props.route === "quiz" && (
+          <button
+            type="button"
+            className={classes.btn + " btn btn-secondary dropdown-toggle"}
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            {quiz[selectQuizNo][0] + " - " + quiz[selectQuizNo][1] + "  "}
+          </button>
+        )}
         <div className="dropdown-menu">
           {quiz.map((arr, i) => {
             return (
