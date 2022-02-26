@@ -13,6 +13,14 @@
   margin-bottom: 0;
 }
 
+.heading > i{
+  color: white;
+}
+
+.heading > i:hover{
+  cursor: pointer;
+}
+
 .dropdown {
   position: relative;
   outline: none;
@@ -26,6 +34,10 @@
   outline: none;
   padding: 0;
   font-size: 20px;
+}
+
+.btn:hover {
+
 }
 
 .select {

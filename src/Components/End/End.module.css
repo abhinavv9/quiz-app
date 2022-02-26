@@ -79,3 +79,64 @@
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
 }
+
+.section {
+  height: 100px;
+}
+
+.ansSection {
+  display: flex;
+}
+
+.ansDiv {
+  width: 150px;
+  height: 30px;
+  background-color: red;
+  color: white;
+  margin-right: 1rem;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+.correctAnsDiv {
+  width: 150px;
+  height: 30px;
+  background-color: rgb(89, 255, 47);
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+.closeBtn {
+  border: none;
+  height: 40px;
+  width: 180px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.closeBtn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+@media only screen and (max-width: 425px) {
+  .card {
+    width: 90%;
+  }
+  .btnDiv {
+    display: block;
+  }
+  .btn1 {
+    margin-bottom: 10px;
+  }
+  .section {
+    height: 120px;
+  }
+  .ansSection {
+    display: block;
+  }
+
+  .ansDiv {
+    margin-bottom: 5px;
+  }
+}

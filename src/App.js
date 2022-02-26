@@ -5,6 +5,7 @@ import End from './Components/End/End';
 import Home from "./Components/Home/Home";
 import Layout from "./Components/Layout/Layout";
 import Navbar from "./Components/Navbar/Navbar";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

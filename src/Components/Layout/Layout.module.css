@@ -4,11 +4,17 @@
 
 .section1 {
   width: 75vw;
-  background-color: #000000ef;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgb(44, 44, 44) 100%
+  );
   min-height: 100vh;
 }
 
 .switchButton {
+  color: rgb(255, 255, 255);
   position: absolute;
   right: 1rem;
   top: 3.5rem;
@@ -18,19 +24,24 @@
 
 .section2 {
   width: 25vw;
-  background-color: #323435;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    -180deg,
+    rgb(44, 44, 44) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
   min-height: 100vh;
 }
 
 @media only screen and (max-width: 1290px) {
-    .section1 {
-      width: 70vw;
-    }
-  
-    .section2 {
-      width: 30vw;
-    }
+  .section1 {
+    width: 70vw;
   }
+
+  .section2 {
+    width: 30vw;
+  }
+}
 
 @media only screen and (max-width: 1090px) {
   .section1 {
@@ -49,11 +60,11 @@
   .section2 {
     position: absolute;
     right: 200%;
-    transition: 0.5s;
+    transition: 0.4s;
     height: 100vh;
   }
   .switchButton {
-      display: block;
+    display: block;
   }
 
   .section2IsOpen {
@@ -61,7 +72,6 @@
     right: 0;
     transform: translateX(0%);
     z-index: 1;
-    transition: 0.5s;
+    transition: 0.4s;
   }
 }
-

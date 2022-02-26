@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import DataExports from "../../Utils/processData";
-import Quiz from "../../Utils/SelectQuiz";
+// import Quiz from "../../Utils/SelectQuiz";
 import classes from "./InfoSection.module.css";
 import { Link } from "react-router-dom";
 import { setQuestionNo } from "../../Redux/Slices/questionSlice";
@@ -19,7 +19,7 @@ const InfoSection = () => {
   //redux states
   const selectQuizNo = useSelector((state) => state.selectQuiz.value);
   const questionNo = useSelector((state) => state.question.value);
-  const timeredux = useSelector((state) => state.time.value);
+  const topic = useSelector((state) => state.topic.value);
   // console.log(questionNo);
   const answer = useSelector((state) => state.answer.value);
 
@@ -62,6 +62,7 @@ const InfoSection = () => {
   ];
 
   const NoOfQuestions = [];
+  const topicName = ["भारतीय दण्ड संहिता", "भारतीय संविधान अनुच्छेद", "Cube"];
 
   questionArr
     .filter((item, index) => index <= data.length - 2)
@@ -97,7 +98,7 @@ const InfoSection = () => {
     } else if (answerId.includes(i)) {
       answerStatus.map((item, idx) => {
         if (i === item.id && item.status === "correct") {
-          color = "#33ff00";
+          color = "#29ff33";
         } else if (i === item.id && item.status === "incorrect") {
           color = "red";
         }
@@ -135,8 +136,8 @@ const InfoSection = () => {
   return (
     <div className={classes.container}>
       <div className={classes.infoContainer}>
-        <p>Time: {formatTime(time)}</p>
-        <p>Topic Name</p>
+        <p className={classes.time}>Time: {formatTime(time)}</p>
+        <p className={classes.topicName}>Topic Name: {topicName[topic]}</p>
       </div>
       <div className={classes.questionNoContainer}>
         {NoOfQuestions.map((item, i) => {
@@ -155,8 +156,8 @@ const InfoSection = () => {
         })}
       </div>
       <hr className={classes.divider} />
-      <Link to="/end" className={classes.btn} onClick={onEnd}>
-        Exit
+      <Link to="/end" onClick={onEnd}>
+        <button className={classes.btn}>Exit</button>
       </Link>
     </div>
   );

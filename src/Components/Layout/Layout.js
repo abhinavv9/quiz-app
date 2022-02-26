@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Switch } from "../../Redux/Slices/switchSlice";
 import classes from "./Layout.module.css";
+import { Spiral as Hamburger } from "hamburger-react";
 
 //component imports
 import Section1 from "../QuestionSection/Section";
@@ -13,12 +14,12 @@ const Layout = () => {
   return (
     <div className={classes.layout}>
       <div className={classes.section1}>
-        <button
+        <span
           className={classes.switchButton}
           onClick={() => dispatch(Switch())}
         >
-          giii
-        </button>
+          <Hamburger/>
+        </span>
         <Section1 />
       </div>
       <div

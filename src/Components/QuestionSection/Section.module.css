@@ -5,8 +5,14 @@
   margin: 4rem auto;
   display: flex;
   flex-direction: column;
-  background-color: rgb(53, 53, 53);
-  box-shadow: 2px 2px 10px 0px rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgb(44, 44, 44) 100%
+  );
+  box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+  border-radius: 5px;
 }
 
 .questionDiv {
@@ -70,19 +76,18 @@
 @media only screen and (max-width: 425px) {
   .container {
     width: 90%;
-    
   }
 
   .questionDiv {
-    font-size:1.2rem;
+    font-size: 1.2rem;
     height: 250px;
   }
 }
 
-@media only screen and (min-device-width: 540px) and (max-device-width: 1024px) and (orientation:portrait) {
-    .container {
-      height: 550px;
-    }
+@media only screen and (min-device-width: 540px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .container {
+    height: 550px;
+  }
 }
 
 /* @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {

@@ -16,8 +16,8 @@ const Card = (props) => {
         <h1>{props.heading}</h1>
         <div className="content">
           <p>{props.content}</p>
-          <Link to={props.Link} onClick={setTopic} className="button">
-            Attempt Quiz
+          <Link to={props.Link} onClick={setTopic}>
+            <button className="button">Attempt Quiz</button>
           </Link>
         </div>
         <div className="img">
